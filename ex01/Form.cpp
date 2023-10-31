@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:58:22 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 15:45:43 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 16:11:36 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,21 +45,23 @@ bool Form::isFormSigned() const {
 	return (this->isSigned);
 }
 
-const int	Form::gradeRequiredToSign() const {
+int	Form::gradeRequiredToSign() const {
 	return (this->gradeToSign);
 }
 
-const int	Form::gradeRequiredToExecute() const {
+int	Form::gradeRequiredToExecute() const {
 	return (this->gradeToExecute);
 }
 
 void	Form::beSigned(Bureaucrat& bureaucrat) {
-	if (bureaucrat.getGrade() <= this->gradeToSign && this->isSigned == false)
+	if (bureaucrat.getGrade() <= this->gradeToSign && this->isSigned == false) {
 		this->isSigned = true;
+		std::cout << this->name << " signed by " << bureaucrat;
+	}
 	else if (this->isSigned == true)
 		throw FormAlreadySignedException();
 	else
-		throw GradeTooLowException();
+		throw Form::GradeTooLowException();
 }
 
 const char*	Form::GradeTooHighException::what() const throw() {
