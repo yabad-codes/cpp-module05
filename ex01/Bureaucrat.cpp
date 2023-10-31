@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:54:56 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 14:18:22 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 15:47:55 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,15 @@ void	Bureaucrat::decrement() {
 	if (newPotentialGrade > MIN_GRADE)
 		throw GradeTooLowException();
 	this->grade = newPotentialGrade;
+}
+
+void	Bureaucrat::signForm(Form& form) {
+	try {
+		form.beSigned(*this);
+		std::cout << this->name << " signed " << form.getName() << std::endl;
+	} catch(std::exception& e) {
+		std::cout << this->name << " couldn't sign " << form.getName() << " because " << e.what() << "." << std::endl;
+	}
 }
 
 const char*	Bureaucrat::GradeTooHighException::what() const throw() {
