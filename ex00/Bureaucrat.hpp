@@ -6,12 +6,14 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:22:31 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 13:53:56 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 13:58:46 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
+# define MAX_GRADE 1
+# define MIN_GRADE 150
 
 # include <iostream>
 # include <exception>
