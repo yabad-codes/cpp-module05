@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:47:21 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 19:23:15 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 19:42:29 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class AForm {
 		int	gradeRequiredToSign() const;
 		int	gradeRequiredToExecute() const;
 		void	beSigned(Bureaucrat&);
+		virtual void	execute(Bureaucrat const& executor) const = 0;
 
 		class GradeTooHighException : public std::exception {
 			public:
