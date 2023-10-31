@@ -6,28 +6,22 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:20:55 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 14:27:08 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 16:11:09 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 int	main() {
-	Bureaucrat	b1("Captain America", 3);
-	Bureaucrat	b2(b1);
-	Bureaucrat	b3;
+	Bureaucrat	b1("Cap", 6);
+	Form		form("Avengers application form", 5, 2);
 	
+	std::cout << b1 << form;
 	try {
-		b2 = b3;
-		b1.increment();
-		std::cout << b1;
-		b1.increment();
-		std::cout << b1;
-		b1.increment();
-		std::cout << b1;
-		b3.decrement();
-	} catch(std::exception& e) {
-		std::cerr << "Error : " << e.what() << std::endl;
+		form.beSigned(b1);
+		b1.signForm(form);
+		printf("Should not be printed on the screen");
+	} catch (std::exception& e) {
+		std::cerr << e.what() << std::endl;
 	}
-	return (0);
 }
