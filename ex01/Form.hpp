@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:47:21 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 14:57:56 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 15:03:50 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ class Form {
 
 		std::string const	getName() const;
 		bool	isFormSigned() const;
-		const int	gradeToSign() const;
-		const int	gradeToExecute() const;
+		const int	gradeRequiredToSign() const;
+		const int	gradeRequiredToExecute() const;
 
 		class GradeTooHighException : public std::exception {
 			public:
