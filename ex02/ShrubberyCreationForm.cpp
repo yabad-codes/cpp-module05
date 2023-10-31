@@ -6,11 +6,12 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:32:44 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 20:08:47 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 20:38:22 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery", 145, 137), target("home") {
 	std::cout << "Shrubbery default constructor called." << std::endl;
@@ -37,5 +38,19 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationF
 }
 
 void	ShrubberyCreationForm::executeAction() const {
-	std::cout << "Executing ASCII trees." << std::endl;
+	std::ofstream	file;
+	file.open(this->target + "_shrubbery");
+	std::string	tree = 
+	"     *\n"
+	"    ***\n"
+	"   *****\n"
+	"  *******\n"
+	" *********\n"
+	"***********\n"
+	"     |\n"
+	"     |";
+	if (file.is_open()) {
+		file << tree << std::endl;
+		file.close();
+	}
 }
