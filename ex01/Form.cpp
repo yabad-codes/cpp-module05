@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:58:22 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 15:20:02 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 15:33:43 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,15 @@ const int	Form::gradeRequiredToSign() const {
 
 const int	Form::gradeRequiredToExecute() const {
 	return (this->gradeToExecute);
+}
+
+void	Form::beSigned(Bureaucrat& bureaucrat) {
+	if (bureaucrat.getGrade() <= this->gradeToSign && this->isSigned == false)
+		this->isSigned = true;
+	else if (this->isSigned == true)
+		std::cout << "Form : " << this->name << " already signed." << std::endl;
+	else
+		throw GradeTooLowException();
 }
 
 const char*	Form::GradeTooHighException::what() const throw() {

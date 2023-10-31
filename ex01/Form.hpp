@@ -6,14 +6,16 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:47:21 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 15:03:50 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 15:27:07 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 
 # define FORM_HPP
-# include <iostream>
+# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
 	private:
@@ -33,6 +35,7 @@ class Form {
 		bool	isFormSigned() const;
 		const int	gradeRequiredToSign() const;
 		const int	gradeRequiredToExecute() const;
+		void	beSigned(Bureaucrat&);
 
 		class GradeTooHighException : public std::exception {
 			public:
