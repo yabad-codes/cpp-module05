@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:21:01 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 19:30:44 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 20:03:03 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class ShrubberyCreationForm : public AForm {
 		~ShrubberyCreationForm();
 
 		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm&);
+		
+		void	executeAction() const;
 };
 
 #endif

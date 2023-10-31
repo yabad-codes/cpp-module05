@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:32:44 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 19:38:00 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 20:03:57 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,8 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationF
 		this->target = other.target;
 	}
 	return (*this);
+}
+
+void	ShrubberyCreationForm::executeAction() const {
+	std::cout << "Executing ASCII trees." << std::endl;
 }
