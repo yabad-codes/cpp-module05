@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:47:21 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 15:27:07 by yabad            ###   ########.fr       */
+/*   Updated: 2023/10/31 15:45:37 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ class Form {
 		};
 
 		class GradeTooLowException : public std::exception {
+			public:
+				const char* what() const throw();
+		};
+		
+		class FormAlreadySignedException : public std::exception {
 			public:
 				const char* what() const throw();
 		};
