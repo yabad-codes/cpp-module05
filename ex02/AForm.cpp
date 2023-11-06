@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:58:22 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 20:01:36 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/06 15:33:38 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void	AForm::execute(Bureaucrat const & executor) const {
 			throw FormNotSignedException();
 		throw GradeTooLowException();
 	}
+	std::cout << "Form executed by " << executor.getName() << std::endl;
 	executeAction();
 }
 
