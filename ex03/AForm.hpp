@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:47:21 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 20:00:48 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/06 16:37:29 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class AForm {
 		AForm();
 		AForm(std::string const, const int, const int);
 		AForm(const AForm&);
-		~AForm();
+		virtual ~AForm();
 
 		AForm&	operator=(const AForm&);
 
