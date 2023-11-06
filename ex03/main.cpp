@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:20:55 by yabad             #+#    #+#             */
-/*   Updated: 2023/11/06 16:45:05 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/06 16:50:05 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,11 @@ int	main() {
 		delete form;
 	}
 	std::cout << "*------------------ End test 2 ------------------*" << std::endl << std::endl;
+	std::cout << "*------------------ Start test 3 ------------------*" << std::endl;
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	}
+	std::cout << "*------------------ End test 3 ------------------*" << std::endl << std::endl;
 }
