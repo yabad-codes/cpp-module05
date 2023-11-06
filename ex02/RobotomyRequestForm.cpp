@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:40:32 by yabad             #+#    #+#             */
-/*   Updated: 2023/10/31 22:06:16 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/06 15:27:04 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,4 @@ void	RobotomyRequestForm::executeAction() const {
 		return ;
 	}
 	std::cout << this->target << " has been robotomized successfuly." << std::endl;
-	return;
 }
